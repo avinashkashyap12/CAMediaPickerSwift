@@ -31,11 +31,6 @@ class ViewController: UIViewController, CAMediaPickerDelegate {
     @IBAction func photoAlbumButtonAction(sender: UIButton){
         self.openCAMediaPicker(withSourceType: CAMediaPickerSourceType.photoAlbum)
     }
-    func openCAMediaPicker(withSourceType sourceType: CAMediaPickerSourceType) -> () {
-        let pickerController = CAMediaManager.init(withController: self)
-        pickerController.delegate = self
-        pickerController.presentMediaPickerController(withSource: sourceType)
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -59,6 +54,12 @@ class ViewController: UIViewController, CAMediaPickerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    //CAMedia picker operation
+    func openCAMediaPicker(withSourceType sourceType: CAMediaPickerSourceType) -> () {
+        let pickerController = CAMediaManager.init(withController: self)
+        pickerController.delegate = self
+        pickerController.presentMediaPickerController(withSource: sourceType)
+    }
     func mediaPickerControllerDidCancel() {
         print("cancel selection")
     }
@@ -72,16 +73,17 @@ class ViewController: UIViewController, CAMediaPickerDelegate {
         self.listCollectionView.reloadData()
     }
     func mediaPickerControllerDidFailWithAuthorizationStatus(status: PHAuthorizationStatus) {
-        print("fail")
+        print("Authorization fail")
+        self.displayAlertView(withMessage: "Application does not have permission to access photo album, please provide all permissions and try again");
     }
-   
-    func mediaPickerControllerDidSelectedVideo(videoAsset: [String : Any]) {
-        var assetData: [String : Any] = [:]
-        assetData[kMediaType] = "Video"
-        assetData[KMediaAsset] = videoAsset["ThumbImage"]
-        assetData["VideoUrl"] = videoAsset ["VideoUrl"]
-        self.collectionList.append(assetData)
-        self.listCollectionView.reloadData()
+    /////display alert message
+    func displayAlertView(withMessage message:String) -> () {
+        let controller = UIAlertController.init(title: "", message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction.init(title: "Ok", style: .cancel) { (action) in
+            
+        }
+        controller.addAction(cancelAction);
+        self.present(controller, animated: true, completion: nil);
     }
 }
 

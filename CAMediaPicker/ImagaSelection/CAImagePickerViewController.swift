@@ -116,6 +116,7 @@ extension CAImagePickerViewController: UICollectionViewDataSource, UICollectionV
         
         //check multiple selection allow or not
         if isMultiSelectionAllow == false{
+            self.selectedCellList.append(indexPath)
             self.sendSelectionDelegateMessage()
             return
         }

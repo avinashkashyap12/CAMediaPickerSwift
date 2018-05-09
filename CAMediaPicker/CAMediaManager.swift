@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import AVFoundation
-import MobileCoreServices
 import Photos
 
 public enum CAMediaPickerSourceType: Int{
@@ -29,6 +27,14 @@ class CAMediaManager: NSObject, PHPhotoLibraryChangeObserver, CASelectionDelegat
         self.init()
         self.ownerController = controller
         self.mediaPickerManager = self
+        isMultiSelectionAllow = true
+    }
+    //disable multiple selection
+    func disableMultipleSelection() -> () {
+        isMultiSelectionAllow = false
+    }
+    //enable multiple selection
+    func enableMultipleSelection() -> () {
         isMultiSelectionAllow = true
     }
     //MARK: -
@@ -59,10 +65,10 @@ class CAMediaManager: NSObject, PHPhotoLibraryChangeObserver, CASelectionDelegat
             return;
         }
         else if authStatus == .denied{
-            print("display alert message")
+            self.didSendAuthorizationfailure(status: PHPhotoLibrary.authorizationStatus())
         }
         else if authStatus == .restricted{
-            print("display alert message")
+            self.didSendAuthorizationfailure(status: PHPhotoLibrary.authorizationStatus())
         }
         else if authStatus == .notDetermined{
             AVCaptureDevice.requestAccess(for: .video, completionHandler: { (granted) in
@@ -70,12 +76,12 @@ class CAMediaManager: NSObject, PHPhotoLibraryChangeObserver, CASelectionDelegat
                     self.openPickerControllerWithSource(sourceType: self.pickerSourceType)
                 }
                 else{
-                    print("not granted to access media, display message, It seems application is not able to use camera due to permisssion denied.")
+                    self.didSendAuthorizationfailure(status: PHPhotoLibrary.authorizationStatus())
                 }
             })
         }
         else{
-            print("Unknown status found")
+            self.didSendAuthorizationfailure(status: PHPhotoLibrary.authorizationStatus())
         }
         
     }
@@ -88,6 +94,7 @@ class CAMediaManager: NSObject, PHPhotoLibraryChangeObserver, CASelectionDelegat
             return
         }
         else if self.authorizationStatus == PHAuthorizationStatus.restricted || self.authorizationStatus == PHAuthorizationStatus.denied{
+            self.didSendAuthorizationfailure(status: self.authorizationStatus)
             return
         }
         self.openPickerControllerWithSource(sourceType: sourceType)
@@ -98,13 +105,12 @@ class CAMediaManager: NSObject, PHPhotoLibraryChangeObserver, CASelectionDelegat
     func requestForAuthorization() -> () {
         PHPhotoLibrary.requestAuthorization { (status) in
             if status == PHAuthorizationStatus.authorized{
-                print("display album list")
                 DispatchQueue.main.async {
                     self.openPickerControllerWithSource(sourceType: self.pickerSourceType)
                 }
             }
             else{
-                print("not granted to access media, display message, It seems application is not able to use camera due to permisssion denied.")
+                self.didSendAuthorizationfailure(status: PHPhotoLibrary.authorizationStatus())
             }
         }
     }
@@ -114,6 +120,9 @@ class CAMediaManager: NSObject, PHPhotoLibraryChangeObserver, CASelectionDelegat
             PHPhotoLibrary.shared().unregisterChangeObserver(self)
             self.openPickerControllerWithSource(sourceType: self.pickerSourceType)
         }
+    }
+    func didSendAuthorizationfailure(status: PHAuthorizationStatus) -> () {
+        self.delegate?.mediaPickerControllerDidFailWithAuthorizationStatus(status: status)
     }
     
 }
@@ -128,7 +137,6 @@ extension CAMediaManager: UIImagePickerControllerDelegate, UINavigationControlle
     }
     //MARK: - Image Picker controller Delegate
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        print("Cancel picker")
         //dismiss picker controller
         picker.dismiss(animated: true, completion: nil)
     }
@@ -147,7 +155,7 @@ extension CAMediaManager: UIImagePickerControllerDelegate, UINavigationControlle
         self.ownerController.present(navController, animated: true, completion: nil)
     }
     func controller(controller: UIViewController, didSelectedAssets assets: [PHAsset]) {
-        //get images from all selected assets
+        //get images from  selected assets
         let manager = PHImageManager.default()
         var tempArray: [UIImage] = []
         var count: Int = 0
@@ -156,7 +164,6 @@ extension CAMediaManager: UIImagePickerControllerDelegate, UINavigationControlle
                 if let image = result{
                     tempArray.append(image)
                 }
-                
                 count += 1
                 if count == assets.count{
                     self.delegate?.mediaPickerControllerDidSelectedImage(assets: tempArray)
