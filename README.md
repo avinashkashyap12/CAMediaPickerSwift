@@ -55,4 +55,7 @@ just add below line of code for disable mulple choice option.
 
     pickerController.disableMultipleSelection()
     
+    
+    
+![](picker_ss.png)
 
