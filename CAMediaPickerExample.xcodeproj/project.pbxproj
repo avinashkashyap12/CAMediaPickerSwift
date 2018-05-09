@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD7FBBE5209764C300D4A2E5 /* check_red.png in Resources */ = {isa = PBXBuildFile; fileRef = FD7FBBE2209764C300D4A2E5 /* check_red.png */; };
+		FD7FBBE6209764C300D4A2E5 /* check_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD7FBBE3209764C300D4A2E5 /* check_red@2x.png */; };
+		FD7FBBE7209764C300D4A2E5 /* check_red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD7FBBE4209764C300D4A2E5 /* check_red@3x.png */; };
 		FDD4B9722095F70200534D57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD4B9712095F70200534D57 /* AppDelegate.swift */; };
 		FDD4B9742095F70200534D57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD4B9732095F70200534D57 /* ViewController.swift */; };
 		FDD4B9772095F70200534D57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD4B9752095F70200534D57 /* Main.storyboard */; };
@@ -14,6 +17,17 @@
 		FDD4B97C2095F70200534D57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD4B97A2095F70200534D57 /* LaunchScreen.storyboard */; };
 		FDD4B9872095F70200534D57 /* CAMediaPickerExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD4B9862095F70200534D57 /* CAMediaPickerExampleTests.swift */; };
 		FDD4B9922095F70200534D57 /* CAMediaPickerExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD4B9912095F70200534D57 /* CAMediaPickerExampleUITests.swift */; };
+		FDD4B9A12095F85500534D57 /* CAMediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD4B9A02095F85500534D57 /* CAMediaManager.swift */; };
+		FDD4B9A32095FD7600534D57 /* CAMediaPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD4B9A22095FD7600534D57 /* CAMediaPickerDelegate.swift */; };
+		FDD4B9A62096245D00534D57 /* CAAlbumPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD4B9A42096245D00534D57 /* CAAlbumPickerViewController.swift */; };
+		FDD4B9A72096245D00534D57 /* CAAlbumPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDD4B9A52096245D00534D57 /* CAAlbumPickerViewController.xib */; };
+		FDD4B9AA2096248900534D57 /* CAImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD4B9A82096248900534D57 /* CAImagePickerViewController.swift */; };
+		FDD4B9AB2096248900534D57 /* CAImagePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDD4B9A92096248900534D57 /* CAImagePickerViewController.xib */; };
+		FDD4B9AE2096252A00534D57 /* CAAlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD4B9AC2096252A00534D57 /* CAAlbumTableViewCell.swift */; };
+		FDD4B9AF2096252A00534D57 /* CAAlbumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDD4B9AD2096252A00534D57 /* CAAlbumTableViewCell.xib */; };
+		FDD4B9B12096301A00534D57 /* CAConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD4B9B02096301A00534D57 /* CAConstant.swift */; };
+		FDD4B9B420963C5F00534D57 /* CAImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD4B9B220963C5F00534D57 /* CAImageCollectionViewCell.swift */; };
+		FDD4B9B520963C5F00534D57 /* CAImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDD4B9B320963C5F00534D57 /* CAImageCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD7FBBE2209764C300D4A2E5 /* check_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check_red.png; sourceTree = "<group>"; };
+		FD7FBBE3209764C300D4A2E5 /* check_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check_red@2x.png"; sourceTree = "<group>"; };
+		FD7FBBE4209764C300D4A2E5 /* check_red@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check_red@3x.png"; sourceTree = "<group>"; };
 		FDD4B96E2095F70200534D57 /* CAMediaPickerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAMediaPickerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD4B9712095F70200534D57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDD4B9732095F70200534D57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +64,17 @@
 		FDD4B98D2095F70200534D57 /* CAMediaPickerExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CAMediaPickerExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD4B9912095F70200534D57 /* CAMediaPickerExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAMediaPickerExampleUITests.swift; sourceTree = "<group>"; };
 		FDD4B9932095F70200534D57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDD4B9A02095F85500534D57 /* CAMediaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAMediaManager.swift; sourceTree = "<group>"; };
+		FDD4B9A22095FD7600534D57 /* CAMediaPickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAMediaPickerDelegate.swift; sourceTree = "<group>"; };
+		FDD4B9A42096245D00534D57 /* CAAlbumPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAAlbumPickerViewController.swift; sourceTree = "<group>"; };
+		FDD4B9A52096245D00534D57 /* CAAlbumPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CAAlbumPickerViewController.xib; sourceTree = "<group>"; };
+		FDD4B9A82096248900534D57 /* CAImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAImagePickerViewController.swift; sourceTree = "<group>"; };
+		FDD4B9A92096248900534D57 /* CAImagePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CAImagePickerViewController.xib; sourceTree = "<group>"; };
+		FDD4B9AC2096252A00534D57 /* CAAlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAAlbumTableViewCell.swift; sourceTree = "<group>"; };
+		FDD4B9AD2096252A00534D57 /* CAAlbumTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CAAlbumTableViewCell.xib; sourceTree = "<group>"; };
+		FDD4B9B02096301A00534D57 /* CAConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAConstant.swift; sourceTree = "<group>"; };
+		FDD4B9B220963C5F00534D57 /* CAImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		FDD4B9B320963C5F00534D57 /* CAImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CAImageCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +102,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD7FBBE1209758EF00D4A2E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FD7FBBE2209764C300D4A2E5 /* check_red.png */,
+				FD7FBBE3209764C300D4A2E5 /* check_red@2x.png */,
+				FD7FBBE4209764C300D4A2E5 /* check_red@3x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FD7FBBE82097930A00D4A2E5 /* ImagaSelection */ = {
+			isa = PBXGroup;
+			children = (
+				FDD4B9A42096245D00534D57 /* CAAlbumPickerViewController.swift */,
+				FDD4B9A52096245D00534D57 /* CAAlbumPickerViewController.xib */,
+				FDD4B9A82096248900534D57 /* CAImagePickerViewController.swift */,
+				FDD4B9A92096248900534D57 /* CAImagePickerViewController.xib */,
+			);
+			path = ImagaSelection;
+			sourceTree = "<group>";
+		};
+		FD7FBBE92097932000D4A2E5 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				FDD4B9AC2096252A00534D57 /* CAAlbumTableViewCell.swift */,
+				FDD4B9AD2096252A00534D57 /* CAAlbumTableViewCell.xib */,
+				FDD4B9B220963C5F00534D57 /* CAImageCollectionViewCell.swift */,
+				FDD4B9B320963C5F00534D57 /* CAImageCollectionViewCell.xib */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
 		FDD4B9652095F70200534D57 = {
 			isa = PBXGroup;
 			children = (
+				FDD4B99F2095F82600534D57 /* CAMediaPicker */,
 				FDD4B9702095F70200534D57 /* CAMediaPickerExample */,
 				FDD4B9852095F70200534D57 /* CAMediaPickerExampleTests */,
 				FDD4B9902095F70200534D57 /* CAMediaPickerExampleUITests */,
@@ -123,6 +184,19 @@
 				FDD4B9932095F70200534D57 /* Info.plist */,
 			);
 			path = CAMediaPickerExampleUITests;
+			sourceTree = "<group>";
+		};
+		FDD4B99F2095F82600534D57 /* CAMediaPicker */ = {
+			isa = PBXGroup;
+			children = (
+				FD7FBBE92097932000D4A2E5 /* CustomCells */,
+				FD7FBBE82097930A00D4A2E5 /* ImagaSelection */,
+				FD7FBBE1209758EF00D4A2E5 /* Resources */,
+				FDD4B9A02095F85500534D57 /* CAMediaManager.swift */,
+				FDD4B9A22095FD7600534D57 /* CAMediaPickerDelegate.swift */,
+				FDD4B9B02096301A00534D57 /* CAConstant.swift */,
+			);
+			path = CAMediaPicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +306,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD7FBBE5209764C300D4A2E5 /* check_red.png in Resources */,
 				FDD4B97C2095F70200534D57 /* LaunchScreen.storyboard in Resources */,
 				FDD4B9792095F70200534D57 /* Assets.xcassets in Resources */,
+				FDD4B9AB2096248900534D57 /* CAImagePickerViewController.xib in Resources */,
+				FDD4B9B520963C5F00534D57 /* CAImageCollectionViewCell.xib in Resources */,
+				FDD4B9A72096245D00534D57 /* CAAlbumPickerViewController.xib in Resources */,
+				FD7FBBE7209764C300D4A2E5 /* check_red@3x.png in Resources */,
 				FDD4B9772095F70200534D57 /* Main.storyboard in Resources */,
+				FDD4B9AF2096252A00534D57 /* CAAlbumTableViewCell.xib in Resources */,
+				FD7FBBE6209764C300D4A2E5 /* check_red@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +340,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDD4B9AA2096248900534D57 /* CAImagePickerViewController.swift in Sources */,
+				FDD4B9B12096301A00534D57 /* CAConstant.swift in Sources */,
+				FDD4B9A12095F85500534D57 /* CAMediaManager.swift in Sources */,
+				FDD4B9A62096245D00534D57 /* CAAlbumPickerViewController.swift in Sources */,
 				FDD4B9742095F70200534D57 /* ViewController.swift in Sources */,
+				FDD4B9B420963C5F00534D57 /* CAImageCollectionViewCell.swift in Sources */,
+				FDD4B9AE2096252A00534D57 /* CAAlbumTableViewCell.swift in Sources */,
 				FDD4B9722095F70200534D57 /* AppDelegate.swift in Sources */,
+				FDD4B9A32095FD7600534D57 /* CAMediaPickerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +515,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PMUSA3XS3C;
 				INFOPLIST_FILE = CAMediaPickerExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.curiousappz.CAMediaPickerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -441,7 +531,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PMUSA3XS3C;
 				INFOPLIST_FILE = CAMediaPickerExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.curiousappz.CAMediaPickerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
