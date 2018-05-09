@@ -1,7 +1,7 @@
 # CAMediaPickerSwift
 CAMediaPicker is swift library very similar to UIImagePickerController. Its allow to select multiple images at a time from photo albums and photo libraries. This picker is implemeted using native "Photos Framework". It is easy to integrate in any project with few lines of code. Its also allow to add image using device camera.
 
-###CAMediaPickerSourceType
+### CAMediaPickerSourceType
 CAMediaPicker is having two type of Source
    1. image:
       Source type "image" provide a user interface for taking new picture/image  using device camera.
